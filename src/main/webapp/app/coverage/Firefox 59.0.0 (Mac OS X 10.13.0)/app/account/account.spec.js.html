@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/account/account.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">app/account/</a> account.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">describe('Account Section &gt;',function(){
+    beforeEach(module('ngBoilerplate'));
+    var scope = {},AccountCtrl,$httpBackend,getMoviesbyType;
+&nbsp;
+    beforeEach(inject(function($controller,$rootScope,_$httpBackend_,_getMoviesbyType_) {
+        scope = $rootScope.$new();
+        $httpBackend=_$httpBackend_;
+        getMoviesbyType=_getMoviesbyType_;
+        AccountCtrl=$controller('AccountCtrl',{$scope:scope});
+    }));
+&nbsp;
+    afterEach(function () {
+        // $httpBackend.verifyNoPendingTasks();
+    });
+&nbsp;
+    //Test 0
+    it('should init the Controller', function () {
+        expect(AccountCtrl).toBeTruthy();
+    });
+&nbsp;
+    // //Test 1
+    // it('should test getFav of getMoviesbyType', function () {
+    //     expect(getMoviesbyType).toBeTruthy();
+    //     var user = {userId: 3,emailId: 'sachin@gmail.com',password: 'sachin'};
+    //     var movies = [{"overview":"A sensitive university student unraveling while on a week  long vacation with a crowd of cocksure relatives and family friends.","original_language":"en","runtime":110,"movieid":129,"type":"F","userid":3,"poster_path":"/ksqGltfJzYJL3lV4YvoIkVgcU55.jpg","moviename":"A Death in the Gunj","release_date":"2016-09-10","genres":"Comedy, Documentary, Romance","popularity":0.5169930000,"productionID":"First Run Features , Tangent Films International","vote_average":7.00000,"belongs_to_collection":0,"vote_count":5},{"overview":"Acclaimed actor and FDNY veteran Steve Buscemi looks at what it  s like to work as a New York City firefighter. Utilizing exclusive behind  the  scenes footage and firsthand accounts from past and present firefighters, this special explores life in one of the world  s most demanding fire departments while illuminating the lives of the often   strong and silent   heroes.","original_language":"en","runtime":60,"movieid":219,"type":"F","userid":3,"poster_path":"/e6Z87ruinkbp0e3TpstpW0P2NgC.jpg","moviename":"A Good Job: Stories of the FDNY","release_date":"2014-09-08","genres":"Action","popularity":0.8625130000,"productionID":"Wendy Finerman Productions,Alcon Entertainment,Grosvenor Park Productions","vote_average":0.00000,"belongs_to_collection":0,"vote_count":0},{"overview":"Adaptation of one of Benelux most famous children  s novels. Tough prime school girl Akkie loves soccer and can be a real bully. Love is the only thing she  s scared of. When Akkie is diagnosed with Leukemia, she has to fight for her life. On the verge of going to high school, Akkie has to allow love to enter her life, and thus gain courage to accept the inevitable.","original_language":"nl","runtime":105,"movieid":790,"type":"F","userid":3,"poster_path":"/cv9lfFQDeCjgHx9GkRZSxuX5yyh.jpg","moviename":"Achtste Groepers Huilen Niet","release_date":"2012-02-15","genres":"Drama, War","popularity":2.2421850000,"productionID":"Columbia Pictures Corporation, International Cinemedia Center,White Line Fever Syndicate","vote_average":7.90000,"belongs_to_collection":0,"vote_count":28},{"overview":"As a cowardly farmer begins to fall for the mysterious new woman in town, he must put his new  found courage to the test when her husband, a notorious gun  slinger, announces his arrival.","original_language":"en","runtime":116,"movieid":375,"type":"F","userid":3,"poster_path":"/12fqfvUmBOPg2pA0RsEhc31P28O.jpg","moviename":"A Million Ways to Die in the West","release_date":"2014-05-22","genres":"Comedy, Romance","popularity":10.3839100000,"productionID":"425 ,2352","vote_average":5.80000,"belongs_to_collection":0,"vote_count":1494},{"overview":"A mother struggles to make a better life for her daughter.","original_language":"en","runtime":105,"movieid":1294,"type":"F","userid":3,"poster_path":"/8tMBGup98UrGgu5kYN83iOfyHZn.jpg","moviename":"All We Had","release_date":"2016-12-09","genres":"Documentary","popularity":1.3569230000,"productionID":"Hesperia Films S.A. , EPIC","vote_average":5.80000,"belongs_to_collection":0,"vote_count":18},{"overview":"In New York, the boys Rocky Sullivan and Jerry Connelly are best friends and small time thieves. After a robbery, Rocky is arrested and sent to a reformatory school, where he begins his criminal career. Jerry escapes and later becomes a priest. After three years in prison, Rocky is released and demands the return of $100,000 deposited with his Solicitor - prior to his jail term.","original_language":"en","runtime":97,"movieid":1813,"type":"F","userid":3,"poster_path":"/fTo9qeUDLd75MNe7MxDlIgFR7pf.jpg","moviename":"Angels with Dirty Faces","release_date":"1938-11-26","genres":"Drama,Comedy","popularity":9.9377060000,"productionID":"Metro-Goldwyn-Mayer (MGM)","vote_average":7.60000,"belongs_to_collection":0,"vote_count":74},{"overview":"A man suffering from insomnia is tricked into buying a drug, Lucia, that makes his desires come true in his dreams, blurring the line between fantasy and reality.","original_language":"ka","runtime":135,"movieid":2519,"type":"F","userid":3,"poster_path":"https://luciafilm.files.wordpress.com/2013/08/lucia-poster2.jpg?w=547","moviename":"Lucia","release_date":"2013-09-06","genres":"Drama,Romance,Sci-Fi","popularity":95.0000000000,"productionID":"Audience films,Creathma Productions","vote_average":8.40000,"belongs_to_collection":0,"vote_count":9700}];
+    //
+    //     $httpBackend.when('GET','/userfav/'+user.userId).respond(movies);
+    //     var mock_movies = getMoviesbyType.getFav(user.userId);
+    //
+    //     expect(mock_movies).toBe(movies);
+    //     $httpBackend.flush();
+    // });
+    //
+    // //Test 2
+    // it('should test getWat of getMoviesbyType', function () {
+    //     var user = {userId: 3,emailId: 'sachin@gmail.com',password: 'sachin'};
+    //     var movies = [{"overview":"A sensitive university student unraveling while on a week  long vacation with a crowd of cocksure relatives and family friends.","original_language":"en","runtime":110,"movieid":129,"type":"F","userid":3,"poster_path":"/ksqGltfJzYJL3lV4YvoIkVgcU55.jpg","moviename":"A Death in the Gunj","release_date":"2016-09-10","genres":"Comedy, Documentary, Romance","popularity":0.5169930000,"productionID":"First Run Features , Tangent Films International","vote_average":7.00000,"belongs_to_collection":0,"vote_count":5},{"overview":"Acclaimed actor and FDNY veteran Steve Buscemi looks at what it  s like to work as a New York City firefighter. Utilizing exclusive behind  the  scenes footage and firsthand accounts from past and present firefighters, this special explores life in one of the world  s most demanding fire departments while illuminating the lives of the often   strong and silent   heroes.","original_language":"en","runtime":60,"movieid":219,"type":"F","userid":3,"poster_path":"/e6Z87ruinkbp0e3TpstpW0P2NgC.jpg","moviename":"A Good Job: Stories of the FDNY","release_date":"2014-09-08","genres":"Action","popularity":0.8625130000,"productionID":"Wendy Finerman Productions,Alcon Entertainment,Grosvenor Park Productions","vote_average":0.00000,"belongs_to_collection":0,"vote_count":0},{"overview":"Adaptation of one of Benelux most famous children  s novels. Tough prime school girl Akkie loves soccer and can be a real bully. Love is the only thing she  s scared of. When Akkie is diagnosed with Leukemia, she has to fight for her life. On the verge of going to high school, Akkie has to allow love to enter her life, and thus gain courage to accept the inevitable.","original_language":"nl","runtime":105,"movieid":790,"type":"F","userid":3,"poster_path":"/cv9lfFQDeCjgHx9GkRZSxuX5yyh.jpg","moviename":"Achtste Groepers Huilen Niet","release_date":"2012-02-15","genres":"Drama, War","popularity":2.2421850000,"productionID":"Columbia Pictures Corporation, International Cinemedia Center,White Line Fever Syndicate","vote_average":7.90000,"belongs_to_collection":0,"vote_count":28},{"overview":"As a cowardly farmer begins to fall for the mysterious new woman in town, he must put his new  found courage to the test when her husband, a notorious gun  slinger, announces his arrival.","original_language":"en","runtime":116,"movieid":375,"type":"F","userid":3,"poster_path":"/12fqfvUmBOPg2pA0RsEhc31P28O.jpg","moviename":"A Million Ways to Die in the West","release_date":"2014-05-22","genres":"Comedy, Romance","popularity":10.3839100000,"productionID":"425 ,2352","vote_average":5.80000,"belongs_to_collection":0,"vote_count":1494},{"overview":"A mother struggles to make a better life for her daughter.","original_language":"en","runtime":105,"movieid":1294,"type":"F","userid":3,"poster_path":"/8tMBGup98UrGgu5kYN83iOfyHZn.jpg","moviename":"All We Had","release_date":"2016-12-09","genres":"Documentary","popularity":1.3569230000,"productionID":"Hesperia Films S.A. , EPIC","vote_average":5.80000,"belongs_to_collection":0,"vote_count":18},{"overview":"In New York, the boys Rocky Sullivan and Jerry Connelly are best friends and small time thieves. After a robbery, Rocky is arrested and sent to a reformatory school, where he begins his criminal career. Jerry escapes and later becomes a priest. After three years in prison, Rocky is released and demands the return of $100,000 deposited with his Solicitor - prior to his jail term.","original_language":"en","runtime":97,"movieid":1813,"type":"F","userid":3,"poster_path":"/fTo9qeUDLd75MNe7MxDlIgFR7pf.jpg","moviename":"Angels with Dirty Faces","release_date":"1938-11-26","genres":"Drama,Comedy","popularity":9.9377060000,"productionID":"Metro-Goldwyn-Mayer (MGM)","vote_average":7.60000,"belongs_to_collection":0,"vote_count":74},{"overview":"A man suffering from insomnia is tricked into buying a drug, Lucia, that makes his desires come true in his dreams, blurring the line between fantasy and reality.","original_language":"ka","runtime":135,"movieid":2519,"type":"F","userid":3,"poster_path":"https://luciafilm.files.wordpress.com/2013/08/lucia-poster2.jpg?w=547","moviename":"Lucia","release_date":"2013-09-06","genres":"Drama,Romance,Sci-Fi","popularity":95.0000000000,"productionID":"Audience films,Creathma Productions","vote_average":8.40000,"belongs_to_collection":0,"vote_count":9700}];
+    //
+    //     $httpBackend.when('GET','/userwat/'+user.userId).respond(movies);
+    //     var mock_movies = getMoviesbyType.getWat(user.userId);
+    //
+    //     expect(mock_movies).toBe(movies);
+    //     $httpBackend.flush();
+    // });
+    //
+    // //Test 3
+    // it('should test getRat of getMoviesbyType', function () {
+    //     var user = {userId: 3,emailId: 'sachin@gmail.com',password: 'sachin'};
+    //     var movies = [{"overview":"A sensitive university student unraveling while on a week  long vacation with a crowd of cocksure relatives and family friends.","original_language":"en","runtime":110,"movieid":129,"type":"F","userid":3,"poster_path":"/ksqGltfJzYJL3lV4YvoIkVgcU55.jpg","moviename":"A Death in the Gunj","release_date":"2016-09-10","genres":"Comedy, Documentary, Romance","popularity":0.5169930000,"productionID":"First Run Features , Tangent Films International","vote_average":7.00000,"belongs_to_collection":0,"vote_count":5},{"overview":"Acclaimed actor and FDNY veteran Steve Buscemi looks at what it  s like to work as a New York City firefighter. Utilizing exclusive behind  the  scenes footage and firsthand accounts from past and present firefighters, this special explores life in one of the world  s most demanding fire departments while illuminating the lives of the often   strong and silent   heroes.","original_language":"en","runtime":60,"movieid":219,"type":"F","userid":3,"poster_path":"/e6Z87ruinkbp0e3TpstpW0P2NgC.jpg","moviename":"A Good Job: Stories of the FDNY","release_date":"2014-09-08","genres":"Action","popularity":0.8625130000,"productionID":"Wendy Finerman Productions,Alcon Entertainment,Grosvenor Park Productions","vote_average":0.00000,"belongs_to_collection":0,"vote_count":0},{"overview":"Adaptation of one of Benelux most famous children  s novels. Tough prime school girl Akkie loves soccer and can be a real bully. Love is the only thing she  s scared of. When Akkie is diagnosed with Leukemia, she has to fight for her life. On the verge of going to high school, Akkie has to allow love to enter her life, and thus gain courage to accept the inevitable.","original_language":"nl","runtime":105,"movieid":790,"type":"F","userid":3,"poster_path":"/cv9lfFQDeCjgHx9GkRZSxuX5yyh.jpg","moviename":"Achtste Groepers Huilen Niet","release_date":"2012-02-15","genres":"Drama, War","popularity":2.2421850000,"productionID":"Columbia Pictures Corporation, International Cinemedia Center,White Line Fever Syndicate","vote_average":7.90000,"belongs_to_collection":0,"vote_count":28},{"overview":"As a cowardly farmer begins to fall for the mysterious new woman in town, he must put his new  found courage to the test when her husband, a notorious gun  slinger, announces his arrival.","original_language":"en","runtime":116,"movieid":375,"type":"F","userid":3,"poster_path":"/12fqfvUmBOPg2pA0RsEhc31P28O.jpg","moviename":"A Million Ways to Die in the West","release_date":"2014-05-22","genres":"Comedy, Romance","popularity":10.3839100000,"productionID":"425 ,2352","vote_average":5.80000,"belongs_to_collection":0,"vote_count":1494},{"overview":"A mother struggles to make a better life for her daughter.","original_language":"en","runtime":105,"movieid":1294,"type":"F","userid":3,"poster_path":"/8tMBGup98UrGgu5kYN83iOfyHZn.jpg","moviename":"All We Had","release_date":"2016-12-09","genres":"Documentary","popularity":1.3569230000,"productionID":"Hesperia Films S.A. , EPIC","vote_average":5.80000,"belongs_to_collection":0,"vote_count":18},{"overview":"In New York, the boys Rocky Sullivan and Jerry Connelly are best friends and small time thieves. After a robbery, Rocky is arrested and sent to a reformatory school, where he begins his criminal career. Jerry escapes and later becomes a priest. After three years in prison, Rocky is released and demands the return of $100,000 deposited with his Solicitor - prior to his jail term.","original_language":"en","runtime":97,"movieid":1813,"type":"F","userid":3,"poster_path":"/fTo9qeUDLd75MNe7MxDlIgFR7pf.jpg","moviename":"Angels with Dirty Faces","release_date":"1938-11-26","genres":"Drama,Comedy","popularity":9.9377060000,"productionID":"Metro-Goldwyn-Mayer (MGM)","vote_average":7.60000,"belongs_to_collection":0,"vote_count":74},{"overview":"A man suffering from insomnia is tricked into buying a drug, Lucia, that makes his desires come true in his dreams, blurring the line between fantasy and reality.","original_language":"ka","runtime":135,"movieid":2519,"type":"F","userid":3,"poster_path":"https://luciafilm.files.wordpress.com/2013/08/lucia-poster2.jpg?w=547","moviename":"Lucia","release_date":"2013-09-06","genres":"Drama,Romance,Sci-Fi","popularity":95.0000000000,"productionID":"Audience films,Creathma Productions","vote_average":8.40000,"belongs_to_collection":0,"vote_count":9700}];
+    //
+    //     $httpBackend.when('GET','/rating/user/'+user.userId).respond(movies);
+    //     var mock_movies = getMoviesbyType.getRat(user.userId);
+    //
+    //     expect(mock_movies).toBe(movies);
+    //     $httpBackend.flush();
+    // });
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 06 2018 18:01:38 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [19/Mar/2018:16:19:54 -0400] "GET /movie/genre/Action HTTP/1.1" 200 4110 http-bio-8080-exec-1 1662
+0:0:0:0:0:0:0:1 - - [19/Mar/2018:16:20:26 -0400] "GET /movie/genre/Comedy HTTP/1.1" 200 3794 http-bio-8080-exec-2 66

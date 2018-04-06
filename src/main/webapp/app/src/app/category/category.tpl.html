@@ -1,0 +1,136 @@
+<div class="page-content">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col" align="center">
+            <h2>Categories</h2>
+        </div>
+        <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="mdl-cell mdl-cell--10-col">
+            <style>
+                .mdl-grid .mdl-card{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    min-height: 150px;
+                }
+                .mdl-grid .mdl-card .mdl-card__title .mdl-card__title-text{
+                    text-align: center;
+                    margin: auto;
+                    color: white;
+                }
+                .this-mdl div{
+                    cursor: pointer;
+                    background-color: rgb(63,81,181);
+                }
+            </style>
+            <div class="mdl-grid mdl-grid--no-spacing this-mdl">
+                <div class="mdl-card mdl-shadow--2dp" ng-show="isLoggedIn()" ui-sref="recommended">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Recommended</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Action'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Action</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Adventure'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Adventure</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Animation'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Animation</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Comedy'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Comedy</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Crime'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Crime</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Documentary'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Documentary</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Drama'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Drama</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Family'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Family</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Fantasy'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Fantasy</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'History'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">History</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Horror'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Horror</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Music'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Music</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Mystery'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Mystery</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Foreign'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">International</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Romance'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Romantic</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'ScienceFiction'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Science Fiction</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'TVMovie'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">TV Movie</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Thriller'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Thriller</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'War'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">War</h2>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--2dp" ui-sref="movies({genre: 'Western'})">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Western</h2>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+</div>
